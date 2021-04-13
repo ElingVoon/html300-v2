@@ -11,14 +11,19 @@
       console.log(myArray[index]);
     }
 
+    // myArray = [13,25,10,43,435];
+    //     for(i = 0; i < myArray.length -1; i++){
+    //       console.log(myArray[i]);
+    //     }
+
     for(let index = 0; index < myArray.length -1; index++){
       myArray[index] = myArray[index] + 15;
     }
     console.log(myArray + 'Each number should 15 greater than before the loop');
 
     var isAbove30 = true;
-    for(let index = 0; index < myArray.length; index++){
-      if(myArray[index] < 30){
+    for(let i = 0; i < myArray.length; i++){
+      if(myArray[i] < 30){
         isAbove30 = false;
       }
     }
@@ -40,6 +45,14 @@
     }
 
     console.log("The total value of the array is " + sum);
+
+//     myArray2 = [13,25,10,43,435];
+// let sum = 0;
+// for(let i = 0; i < myArray2.length; i++){
+//   sum = sum + myArray2[i];
+// }
+//
+// console.log("The total value of the array is " + sum);
   </script>
 </head>
 <body>
