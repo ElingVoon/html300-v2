@@ -8,20 +8,13 @@
   <script src="scripts.js"></script>
   <script src="includes.js"></script>
   <script src="every.js"></script>
+  <script src="find.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-
-1. forEach
-2. map
-3. filter
-4. reduce
-5. Includes
-6. every
-7. find
 
     <form id="example-form">
       <p>The <mark>reduce() method</mark> executes a reducer function (that you provide) on each element of the array, resulting in single output value.
@@ -42,7 +35,7 @@
       <label>What is the missing color in the primary color wheel that is not listed below:
         <input type="text" class="input">
       </label>
-      <input type="submit" value="See Demo!">
+      <input type="submit" value="Run">
       <p>Yellow, blue and: <span class="output"></span></p>
       </div>
     </form>
@@ -54,19 +47,19 @@
   <label>Array [1, 30, 39, 29, 10, 13]
     <input type="text" class="input">
   </label>
-  <input type="submit" value="See Demo!">
-  <p>Enter a number that is not larger than in the array: <span class="output"></span></p>
+  <input type="submit" value="Run">
+  <p>Enter a number that is larger than in the array: <span class="output"></span></p>
   </div>
 </form>
 
 <hr>
 <form id="find-form">
-  <p>The <mark>find()</mark> method returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+  <p>The <mark>find()</mark> method returns the value of the first element in the provided array that satisfies the provided testing function.
   <div class="">
   <label>Array [1, 30, 39, 29, 10, 13]
     <input type="text" class="input">
   </label>
-  <input type="submit" value="See Demo!">
+  <input type="submit" value="Run">
   <p>Find a number larger than 9 in the array: <span class="output"></span></p>
   </div>
 </form>
@@ -78,7 +71,7 @@
   <label>Element [wind, fire, rain, storm, tornado]
     <input type="text" class="input">
   </label>
-  <input type="submit" value="See Demo!">
+  <input type="submit" value="Run">
   <p>What element above have more than 4 letters? <span class="output"></span></p>
   </div>
 </form>

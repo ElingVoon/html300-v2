@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // Find the every form, and handle its submit event
   const everyForm = document.querySelector('#every-form')
 
-  everyeForm.addEventListener('submit', function(event){
+  everyForm.addEventListener('submit', function(event){
     // Prevent the form from trying to submit to a server
     event.preventDefault()
 
@@ -17,14 +17,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
       // Use every to compare user's input to all the numbers in the data array
 
-	    const isBelowThreshold = data3.every((currentValue) => currentValue < 40);
+	    const isBelowThreshold = data3.every((currentValue) => currentValue < userNumber3);
 
-      // // Use every to compare all the numbers in the data array
-      // const isBelowThreshold = (currentValue) => currentValue > 8;
+      // console.log(data3.every((currentValue) => currentValue > userNumber3));
 
-      // Output the number to the page
+      // Output the result to the page
       document.querySelector('#every-form .output').innerHTML = isBelowThreshold
-    }
+
 
     // Clear the form field so the user can try again
     inputField3.value = ''
