@@ -2,24 +2,24 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   // Find the includes form, and handle its submit event
-  const includesForm = document.querySelector('#includes-form')
+  const filterForm = document.querySelector('#filter-form')
 
-  includesForm.addEventListener('submit', function(event){
+  filterForm.addEventListener('submit', function(event){
     // Prevent the form from trying to submit to a server
     event.preventDefault()
 
     // An array that will compare to user input
-    let data2 = ["red", "yellow", "blue"]
+    let data5 = ["wind", "fire", "rain", "storm", "tornado"]
 
-    const inputField2 = document.querySelector('#includes-form .input')
-    const userInput2 = inputField2.value
+    const inputField5 = document.querySelector('#filter-form .input')
+    const userInput5 = inputField5.value
 
     // Use includes to see missing primary color in the array
-    const isIn = data2.includes(userInput2);
+    const filter = data5.filter(userInput5 => userInput5.lenght > 4);
 
-    document.querySelector('#includes-form .output').innerHTML = isIn
+    document.querySelector('#filter-form .output').innerHTML = filter
 
     // Clear the form field so the user can try again
-    inputField2.value = ''
+    inputField5.value = ''
   })
 })

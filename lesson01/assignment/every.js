@@ -1,7 +1,7 @@
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
 document.addEventListener("DOMContentLoaded", function(){
 
-  // Find the example form, and handle its submit event
+  // Find the every form, and handle its submit event
   const everyForm = document.querySelector('#every-form')
 
   everyeForm.addEventListener('submit', function(event){
@@ -9,24 +9,20 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we compare with user input
-    let data3 = [0, 1, 2, 3, 5, 8]
+    let data3 = [1, 30, 39, 29, 10, 13]
 
     const inputField3 = document.querySelector('#every-form .input')
     const userInput3 = inputField3.value
     const userNumber3 = parseInt(userInput3)
 
-    // If the user's input was a number, push it into the array and continue
-    if(!isNaN(userNumber)){
-      data3.push(userNumber)
-
       // Use every to compare user's input to all the numbers in the data array
 
-	    const isBelowThreshold = data3.every(userInput3) > 8;
+	    const isBelowThreshold = data3.every((currentValue) => currentValue < 40);
 
       // // Use every to compare all the numbers in the data array
       // const isBelowThreshold = (currentValue) => currentValue > 8;
 
-      // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
+      // Output the number to the page
       document.querySelector('#every-form .output').innerHTML = isBelowThreshold
     }
 
