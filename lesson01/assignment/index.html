@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Part 2 Example</title>
-    <!-- jQuery CDN -->
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-    </script>
-    <!-- Local Files -->
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2 Example</title>
+  <script src="scripts.js"></script>
+  <script src="includes.js"></script>
+  <script src="every.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using ES6+ Methods</h1>
-        <section class="input-set">
-            <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-        </section>
+  <main>
+    <h1>Using ES6+ Methods in DOM Interactions</h1>
 
+1. forEach
+2. map
+3. filter
+4. reduce
+5. Includes
+6. every
+7. find
 
-    </main>
+    <form id="example-form">
+      <p>The <mark>reduce() method</mark> executes a reducer function (that you provide) on each element of the array, resulting in single output value.
+      <div class="">
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Demo!">
+      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      </div>
+    </form>
+
+<hr>
+    <form id="includes-form">
+      <p>The <mark>includes() method</mark> determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+      <div class="">
+      <label>What is the missing color in the primary color wheel that is not listed below:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Demo!">
+      <p>Yellow, blue and: <span class="output"></span></p>
+      </div>
+    </form>
+
+<hr>
+<form id="every-form">
+  <p>The <mark>every() method</mark> tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+  <div class="">
+  <label>Array [0, 1, 2, 3, 5, 8]
+    <input type="text" class="input">
+  </label>
+  <input type="submit" value="See Demo!">
+  <p>Enter a number that is not larger than in the array: <span class="output"></span></p>
+  </div>
+</form>
+
+  </main>
 </body>
 
 </html>
