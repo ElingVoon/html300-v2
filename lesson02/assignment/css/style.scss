@@ -7,16 +7,38 @@
 // TODO: Refactor these styles to use Sass features
 
 //variables
-$primary-color:
+$base-color: gray;
 $no-serif: sans-serif;
 $default-border-radius: 5px;
 
+
+//main content
 main {
-  font-family: $no-serif;
+text-align: center;
+color: $base-color;
+width: 90%;
+border: 40px solid lightgray;
+border-radius: 5px;
+margin: 2rem;
   img {
     border-radius: 50%;
   }
 }
 
-// MIXIN
-@mixin
+h2 {
+  font-weight: bold;
+}
+
+.col-left {
+  width: 30%;
+}
+.col-right {
+  width: 70%;
+}
+
+
+.position {
+  font-style: italic;
+  font-weight: lighter;
+  margin: -.75rem;
+}
