@@ -55,6 +55,24 @@ const employeesJSON =
   }
  ]`
 
+//create the employees class constructor
+class employees {
+  //give it expected parameters
+  constructor(name, jobTitle, company, experience, school, major, email, linkedInUrl, codeLanguages) {
+    //set those equal to the instance
+    this.name = name;
+    this.jobTitle = jobTitle;
+    this.company = company;
+    this.experience = experience;
+    this.school = school;
+    this.major = major;
+    this.email = email;
+    this.linkedInUrl = linkedInUrl;
+    this.codeLanguages = codeLanguages;
+  }
+}
+
+
  const employees = JSON.parse(employeesJSON)
 
  const container = document.querySelector('.main')
