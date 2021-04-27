@@ -57,10 +57,29 @@ const employeesJSON =
 
  const employees = JSON.parse(employeesJSON)
 
- employees.forEach(function(el){
-	 let
+ const container = document.querySelector('.main')
 
+ employees.forEach(function(el) {
+	 let div = document.createElement('div')
+	 div.setAttribute('class', 'main-container')
+	 div.innerHTML = `
+	 	<div class='col-left'>
+		 <img src='img/headshot.jpg' width='100%' alt='headshot of Paolo Maldini'>
+		 <h1>${el.name}</h1>
+		 <p>${el.jobTitle}</p>
+		</div>
 
- });
+		<div class='right-left'>
+		 <p>${el.company}</p>
+		 <p>${el.experience}</p>
+		 <p>${el.school}</p>
+		 <p>${el.major}</p>
+		 <p>${el.email}</p>
+		 <p>${el.linkedInUrl}</p>
+		 <p>${el.codeLanguages}</p>
+		</div>
+		`
+		container.append(div)
+	 })
 
  // console.log(employees[0])
