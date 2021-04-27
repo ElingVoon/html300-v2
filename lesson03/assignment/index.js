@@ -1,6 +1,5 @@
 // Create HTML code from employees JSON
-const employeesJSON =
-`[
+const employees = [
   {
     "name": "Paolo Maldini",
     "jobTitle": "Front End Developer",
@@ -52,50 +51,33 @@ const employeesJSON =
     "codeLanguages": [
        "HTML", "CSS", "JavaScript", "React", "Vue", "Redux"
     ]
-  }
- ]`
+  },
+];
 
 //create the employees class constructor
-class employees {
-  //give it expected parameters
-  constructor(name, jobTitle, company, experience, school, major, email, linkedInUrl, codeLanguages) {
-    //set those equal to the instance
-    this.name = name;
-    this.jobTitle = jobTitle;
-    this.company = company;
-    this.experience = experience;
-    this.school = school;
-    this.major = major;
-    this.email = email;
-    this.linkedInUrl = linkedInUrl;
-    this.codeLanguages = codeLanguages;
-  }
-}
-
-
- const employees = JSON.parse(employeesJSON)
-
  const container = document.querySelector('.main')
 
  employees.forEach(function(el) {
 	 let div = document.createElement('div')
 	 div.setAttribute('class', 'main-container')
 	 div.innerHTML = `
+   <div class='main-container'>
 	 	<div class='col-left'>
 		 <img src='img/headshot.jpg' width='100%' alt='headshot of Paolo Maldini'>
 		 <h1>${el.name}</h1>
 		 <p>${el.jobTitle}</p>
 		</div>
 
-		<div class='right-left'>
-		 <p>${el.company}</p>
-		 <p>${el.experience}</p>
-		 <p>${el.school}</p>
-		 <p>${el.major}</p>
-		 <p>${el.email}</p>
-		 <p>${el.linkedInUrl}</p>
-		 <p>${el.codeLanguages}</p>
+		<div class='col-right'>
+		 <p class='card-list'>Company: <span class='card-detail'>${el.company}</span></p>
+		 <p class='card-list'>Experience: <span class='card-detail'>${el.experience}</span></p>
+		 <p class='card-list'>School: <span class='card-detail'>${el.school}</span></p>
+		 <p class='card-list'>Major: <span class='card-detail'>${el.major}</span></p>
+		 <p class='card-list'>Email: <span class='card-detail'>${el.email}</span></p>
+		 <p class='card-list'>LinkIn URL: <span class='card-detail'>${el.linkedInUrl}</span></p>
+		 <p class='card-list'>Code Languages: <span class='card-detail'>${el.codeLanguages.join(', ')}</span></p>
 		</div>
+  </div>
 		`
 		container.append(div)
 	 })
