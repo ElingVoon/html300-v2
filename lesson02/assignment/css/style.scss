@@ -4,3 +4,93 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// TODO: Refactor these styles to use Sass features
+
+//variables
+$base-color: gray;
+$cardlist-color: #606060;
+$no-serif: sans-serif;
+$card-border-radius: 5px;
+$breakpoint: mobile;
+
+
+//main content
+main {
+text-align: center;
+color: $base-color;
+width: 95%;
+border: 40px solid lightgray;
+border-radius: $card-border-radius;
+margin: 1rem;
+  img {
+    border-radius: 50%;
+  }
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.main-container
+{
+  display: flex;
+  flex-direction: row;
+}
+.col-left {
+  width: 35%;
+  padding-bottom: 2rem;
+}
+.col-right {
+  width: 65%;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.position {
+  font-style: italic;
+  font-weight: lighter;
+  margin: -.75rem;
+}
+
+div > p > .card-list:first-of-type {
+  padding-top: 0;
+}
+
+.card-list {
+  font-size: 1rem;
+  font-weight: bold;
+  color:$cardlist-color;
+}
+.card-detail {
+  font-size: .9rem;
+  font-weight: normal;
+  vertical-align: middle;
+  color:$base-color;
+}
+
+.linkedin-icon {
+  margin-right: .5rem;
+}
+
+span {
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+//for viewport width 767px and less
+@media screen and (max-width: 767px) {
+  .main-container
+  {
+    margin:  0 auto;
+    flex-direction: column;
+    .col-left {
+      margin:  0 auto;
+      width: 95%;
+    }
+    .col-right {
+      margin:  0 auto;
+      width: 95%;
+    }
+  }
