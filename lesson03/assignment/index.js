@@ -61,11 +61,10 @@ const employees = [
 	 let div = document.createElement('div')
 	 div.setAttribute('class', 'main-container')
 	 div.innerHTML = `
-   <div class='main-container'>
-	 	<div class='col-left'>
+   	 <div class='col-left'>
 		 <img src='img/headshot.jpg' width='100%' alt='headshot of Paolo Maldini'>
-		 <h1>${el.name}</h1>
-		 <p>${el.jobTitle}</p>
+		 <h2>${el.name}</h2>
+		 <p class='position'>${el.jobTitle}</p>
 		</div>
 
 		<div class='col-right'>
@@ -74,11 +73,11 @@ const employees = [
 		 <p class='card-list'>School: <span class='card-detail'>${el.school}</span></p>
 		 <p class='card-list'>Major: <span class='card-detail'>${el.major}</span></p>
 		 <p class='card-list'>Email: <span class='card-detail'>${el.email}</span></p>
-		 <p class='card-list'>LinkIn URL: <span class='card-detail'>${el.linkedInUrl}</span></p>
 		 <p class='card-list'>Code Languages: <span class='card-detail'>${el.codeLanguages.join(', ')}</span></p>
+     <img class="linkedin-icon" src="img/linkedin.svg" width="32px" alt="linkedin logo"><span>${el.linkedInUrl}</span>
 		</div>
-  </div>
-		`
+  		`
+
 		container.append(div)
 	 })
 
