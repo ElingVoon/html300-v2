@@ -6,6 +6,23 @@
 
 // TODO: Refactor these styles to use Sass features
 
+//variables
+$primary-color:
+$no-serif: sans-serif;
+$default-border-radius: 5px;
+
+main {
+  font-family: $no-serif;
+  img {
+    border-radius: 50%;
+  }
+}
+
+// MIXIN
+@mixin
+
+
+
 .static-block {
   border-top: 3px solid #6e27c5;
 }
