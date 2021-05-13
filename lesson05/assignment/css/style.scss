@@ -26,13 +26,13 @@
    grid-area: nav;
 }
 .main {
-   background: limegreen;
+   background: #1f567c;
    grid-area: main;
 }
 .aside {
    background: gold;
    grid-area: right;
-}
+ }
 .footer {
    background: blueviolet;
    grid-area: footer;
@@ -42,4 +42,15 @@
    font-size: 2rem;
    text-align: center;
    padding: 1rem;
+}
+
+//for viewport width 767px and less /* flex layout */
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    .main, .aside {
+       width: 95%;
+    }
 }
