@@ -5,37 +5,41 @@
 @import 'components.content';
 
 
-
 .container {
-   height: 90vh;
+   height: 100vh;
    width: 100vw;
    margin: 0 auto;
    display: grid;
-   grid-template-areas: "header header "
+   grid-template-areas: "header header"
+                        "nav nav"
                         "main right"
                         "footer footer";
-   grid-template-rows: 1fr 3fr 1fr;
-   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 1fr 3rem 3fr 1fr;
+   grid-template-columns: 2fr 1fr;
 }
 .header {
    background: deepskyblue;
    grid-area: header;
 }
-.cell-3 {
+.nav {
+   background: pink;
+   grid-area: nav;
+}
+.main {
    background: limegreen;
    grid-area: main;
 }
-.cell-4 {
+.aside {
    background: gold;
    grid-area: right;
 }
-.cell-5 {
+.footer {
    background: blueviolet;
    grid-area: footer;
 }
 .cell {
    color: white;
-   font-size: 2.5rem;
+   font-size: 2rem;
    text-align: center;
-   padding: 4rem;
+   padding: 1rem;
 }
