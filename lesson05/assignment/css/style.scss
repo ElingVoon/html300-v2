@@ -12,7 +12,7 @@
    display: grid;
    grid-template-areas: "header header"
                         "nav nav"
-                        "main right"
+                        "main aside"
                         "footer footer";
    grid-template-rows: 1fr 3rem 3fr 1fr;
    grid-template-columns: 2fr 1fr;
@@ -31,7 +31,7 @@
 }
 .aside {
    background: gold;
-   grid-area: right;
+   grid-area: aside;
  }
 .footer {
    background: blueviolet;
@@ -44,13 +44,16 @@
    padding: 1rem;
 }
 
+
 //for viewport width 767px and less /* flex layout */
 @media screen and (max-width: 767px) {
   .container {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    .main, .aside {
-       width: 95%;
-    }
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+      grid-template-columns: 1fr;
+  }
 }
