@@ -109,13 +109,69 @@
             </div>
 
             <!--form widget col 8 -->
-            <div class="col-10 container py-4">
+            <div class="col-8 container py-4">
   						<h2>Contact Me</h2>
-  						<form>
-  						  <div class="form-group">
+
+              <form name="contactForm" action="/submit.php" onsubmit="return validateForm()" method="post" class="row g-3">
+                <div class="col-6">
+                  <label class="form-label">First name</label>
+                  <input type="text" class="form-control" name="FirstName" required>
+                </div>
+                <div class="col-6">
+                  <label class="form-label">Last name</label>
+                  <input type="text" class="form-control" name="LastName" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="InputEmail">Email</label>
+                  <input type="email" class="form-control" name="Email">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">City</label>
+                  <input type="text" class="form-control" name="City">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">State</label>
+                  <select class="form-select" id="State">
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Zip</label>
+                  <input type="text" class="form-control" name="Zip">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="messageTextarea">Message</label>
+                  <textarea class="form-control" name="messageTextarea" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Terms" required>
+                    <label class="form-check-label">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+
+
+
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+  						<!-- <form>
+  						  <div class="col-lg-4 form-group">
   						    <label for="InputName">Name</label>
   						    <input type="name" class="form-control" id="InputName" aria-describedby="nameHelp" placeholder="Enter name">
   						  </div>
+                <div class="col-lg-4 form-group">
+  						    <label for="InputName">Name</label>
+  						    <input type="name" class="form-control" id="InputName" aria-describedby="nameHelp" placeholder="Enter name">
+  						  </div>
+
+
   						  <div class="form-group">
   						    <label class="mt-3" for="InputEmail">Email</label>
   						    <input type="email" class="form-control" id="InputEmail" placeholder="email">
@@ -128,8 +184,17 @@
   						    <label class="mt-3" for="messageTextarea">Message</label>
   						    <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
   						  </div>
+
+                <div class="form-check py-4">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Notify me when new joke is published!
+                  </label>
+                </div>
+
+
   						  <button type="submit" class="btn btn-primary mt-4">Submit</button>
-  						</form>
+  						</form> -->
   					</div>
         </main>
     </body>
