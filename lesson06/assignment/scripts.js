@@ -1,24 +1,19 @@
-<script>
-    function validateForm() {
-        var name = document.forms["contactForm"]["Name"];
-        var email = document.forms["contactForm"]["EMail"];
-        var address = document.forms["contactForm"]["Address"];
 
-        if (name.value == "") {
-            window.alert("Please enter your first name.");
-            name.focus();
-            return false;
-        }
-				if (email.value == "") {
-						window.alert("Please enter a valid e-mail address.");
-						email.focus();
-						return false;
-				}
-				if (phone.value == "") {
-						window.alert("Please enter your telephone number.");
-						phone.focus();
-						return false;
-				}
+function validateForm() {
+  const userName = document.forms["contactForm"]["username"].value;
+  const email = document.forms["contactForm"]["email"].value;
+  const messageTextarea = document.forms["contactForm"]["messageTextarea"].value;
+}
 
-				return true;
-	     }
+  if (userName == "") {
+    alert("Please enter your name.");
+    return false;
+  } else if (email == "") {
+    alert("Please enter your email.");
+    return false;
+  } else if (messageTextarea.value == "") {
+    alert("Please enter a message.");
+    return false;
+  }
+  else alert("Thank you, we'll contact you soon!");
+}
