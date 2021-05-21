@@ -5,6 +5,7 @@
 @import 'components.content';
 
 
+<<<<<<< HEAD
 
 .container {
    height: 90vh;
@@ -16,11 +17,25 @@
                         "footer footer";
    grid-template-rows: 1fr 3fr 1fr;
    grid-template-columns: 3fr 1fr;
+=======
+.container {
+   height: 100vh;
+   width: 100vw;
+   margin: 0 auto;
+   display: grid;
+   grid-template-areas: "header header"
+                        "nav nav"
+                        "main aside"
+                        "footer footer";
+   grid-template-rows: 1fr 3rem 3fr 1fr;
+   grid-template-columns: 2fr 1fr;
+>>>>>>> 3dd3df9295a6a47152cc1259dd497890b1ea1991
 }
 .header {
    background: deepskyblue;
    grid-area: header;
 }
+<<<<<<< HEAD
 .cell-3 {
    background: limegreen;
    grid-area: main;
@@ -30,12 +45,47 @@
    grid-area: right;
 }
 .cell-5 {
+=======
+.nav {
+   background: pink;
+   grid-area: nav;
+}
+.main {
+   background: #1f567c;
+   grid-area: main;
+}
+.aside {
+   background: gold;
+   grid-area: aside;
+ }
+.footer {
+>>>>>>> 3dd3df9295a6a47152cc1259dd497890b1ea1991
    background: blueviolet;
    grid-area: footer;
 }
 .cell {
    color: white;
+<<<<<<< HEAD
    font-size: 2.5rem;
    text-align: center;
    padding: 4rem;
+=======
+   font-size: 2rem;
+   text-align: center;
+   padding: 1rem;
+}
+
+
+//for viewport width 767px and less /* flex layout */
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+      grid-template-columns: 1fr;
+  }
+>>>>>>> 3dd3df9295a6a47152cc1259dd497890b1ea1991
 }

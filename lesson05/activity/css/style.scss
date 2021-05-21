@@ -4,3 +4,30 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+nav {
+	background: #00A3AD;
+	width: 100%;
+	height: 8rem;
+
+
+	.logo > a, .login > a {
+		font-size: 1.2rem;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		color: #fff;
+		width: 100%;
+			margin: 0 auto;
+
+	}
+	ul li {
+		display: inline-block; //display links in one line
+
+	}
+	ul li a {
+		color: #fff;
+	}
+
+}
