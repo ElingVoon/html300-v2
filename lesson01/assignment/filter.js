@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const inputField5 = document.querySelector('#filter-form .input')
     const userInput5 = inputField5.value
 
-    // Use includes to see missing primary color in the array
+    // Use filter to creates a new array with elements that have more than 4 letters in the existing array
     const filter = data5.filter(userInput5 => userInput5.length > 4);
     console.log(filter);
     document.querySelector('#filter-form .output').innerHTML = filter
