@@ -9,35 +9,55 @@
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
-
-   <div id="app">
-     <img v-if="imageShowing" v-bind:src="imageSrc">
-     <button v-if="!imageShowing">IMG BTN</button>
-     <!-- <img v-if="showImage"></img> -->
-     <p>Counter: {{ counter }}</p>
-     <button v-on:click="plusOne">Add one!</button>
-   </div>
-
-     <script type="text/javascript">
-       const CounterApp = {
-         data() {
-           return {
-            counter: 0,
-            alt: "A black lab puppy"
-            imageShowing: false,
-            imageSrc: "https://picsum.photos/id/237/200/300"
-           }
-         },
-         method: {
-           plusOne(){
-             this.counter += 1
-           },
-           generateGreeting(){
-             return "Hello there!"
-           }
-         }
+      <div id="app">
+        <p v-bind:title="greeting">
+          <span v-if="name === 'cheri'">
+            {{ generateGreeting() }} {{ name }}
+          </span>
+          <span v-else>
+            Goodbye
+          </span>
+        </p>
+        <img v-if="imageShowing" v-bind:src="imageSrc">
+        <button v-on:click="toggleImage">IMG BTN</button>
+        <ul>
+          <li v-for="num in favNumbers">
+            {{ num }}
+          </li>
+        </ul>
+        <p>Counter: {{ counter }}</p>
+        <button v-on:click="plusOne">Add one!</button>
+        <button v-on:click="addMore(3)">Add three!</button>
+      </div>
+      <script type="text/javascript">
+        const CounterApp = {
+          name: "counter app",
+          data() {
+            return {
+              laterDater: undefined,
+              counter: 0,
+              name: "cheri",
+              greeting: this.generateGreeting(),
+              favNumbers: [3, 6, 15],
+              imageShowing: false,
+              imageSrc: "https://picsum.photos/200/300"
+            }
+          },
+          methods: {
+            plusOne(){
+              this.counter += 1
+            },
+            toggleImage() {
+              this.imageShowing = !this.imageShowing
+            },
+            addMore(amt){
+              this.counter += parseInt(amt)
+            },
+            generateGreeting(){
+              return "Hello there! "
+            }
+          }
         }
-
         Vue.createApp(CounterApp).mount('#app')
       </script>
     </body>
