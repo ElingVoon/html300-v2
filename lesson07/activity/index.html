@@ -61,10 +61,9 @@
                 "https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y",
                 "https://picsum.photos/200/300"
               ]
-                              // Math.floor((Math.random() * 10) + 1);
+              // Return a random number in the imgSrc
               let randomNum = Math.floor(Math.random() * imgSrc.length);
               return imgSrc[randomNum];
-              // Return a random number in the imgSrc
             },
             addMore(amt){
               this.counter += parseInt(amt)
