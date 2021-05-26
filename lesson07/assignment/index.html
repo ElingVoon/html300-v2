@@ -5,21 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+				<link rel="stylesheet" href="https://www.visualcrossing.com/widgets/forecast/weather-forecast-widget-d3.css">
+				<script src="https://unpkg.com/vue@next"></script>
         <script src="scripts.js"></script>
-        <title>Assignment 05 - CSS Grid</title>
+        <title>Assignment 07 - Vue</title>
     </head>
     <body>
       <div class="container">
         <header class="cell header">
-          <img src="seattle_weather_logo.png">
+          <img src="./seattle_weather_logo.png" alt="Seattle Weather Logo in white color">
         </header>
-        <nav class="cell nav">nav area</nav>
+        <nav class="nav" role="navigation" aria-label="primary">
+					<ul>
+						<li class="li"><a href="">Home</a></li>
+						<li class="li"><a href="">link</a></li>
+						<li class="li"><a href="">Weather Jokes</a></li>
+						<li class="li"><a href="">link</a></li>
+					</ul>
+				</nav>
         <!-- visualcrossing weather module -->
-          <main class="cell weatherWidget">
+          <main class="weatherForecastWidget">
           </main>
           <!-- weather jokes module -->
           <aside class="cell aside">Weather Jokes</aside>
-        <footer class="cell footer">Footer</footer>
+        <footer class="cell footer">Footer
+
+				</footer>
       </div>
     </body>
 </html>
