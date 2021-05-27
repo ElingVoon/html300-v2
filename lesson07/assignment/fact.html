@@ -27,7 +27,9 @@
         <!-- visualcrossing weather module -->
           <main>
 						<div id="app">
-						  Counter: {{ counter }}
+              <h2>{{}}</h2>
+
+              <button v-on:click="randomFact">Show me another fact</button>
 						</div>
 
           </main>
@@ -40,9 +42,27 @@
 
 			<script type="text/javascript">
 				const CounterApp = {
+					name: "counter app",
 					data() {
 						return {
-							counter: 0
+							climateFact: [{
+  								title: "28 times more efficient",
+  								des: "Methane is roughtly 28 times more efficient at trapping heat in the Earth’s atomosphere compared to carbon dioxide, and current levels of methane in the atmosphere are higher than at any point in the past 2,000 years."
+                },
+                {
+									title: "$1.16 trillion in damages",
+									des: "Over the past 15 years (2005-2019), there have been 156 separate billion-dollar weather or climate disasters in the U.S that have cost a combined $1.16 trillion in damages."
+								},
+                {
+                  title: "2019 was second-warmest year on record",
+                  des: "Earth’s global average surface temperature was 1.71°F (0.95°C) above the 20th-century average in 2019. Nine of the 10 warmest years on record have occurred since 2005."
+                }
+              ],
+              methods: {
+                randomFact() = Math.floor(Math.random() * this.climateFact.length);
+                return climateFact[randomFact];
+              }
+              
 						}
 					}
 				}
