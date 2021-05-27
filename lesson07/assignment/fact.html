@@ -9,7 +9,7 @@
 				<link rel="stylesheet" href="https://www.visualcrossing.com/widgets/forecast/weather-forecast-widget-d3.css">
 				<script src="https://unpkg.com/vue@next"></script>
         <script src="scripts.js"></script>
-        <title>Assignment 07 - Vue</title>
+        <title>Climate Fact</title>
     </head>
     <body>
       <div class="container">
@@ -18,20 +18,37 @@
         </header>
         <nav class="nav" role="navigation" aria-label="primary">
 					<ul>
-						<li class="li"><a href="">Home</a></li>
+						<li class="li"><a href="index.html">Home</a></li>
 						<li class="li"><a href="">link</a></li>
 						<li class="li"><a href="">Weather Jokes</a></li>
-						<li class="li"><a href="fact.html">Climate Fact</a></li>
+						<li class="li"><a href="">Climate Fact</a></li>
 					</ul>
 				</nav>
         <!-- visualcrossing weather module -->
-          <main class="weatherForecastWidget">
+          <main>
+						<div id="app">
+						  Counter: {{ counter }}
+						</div>
+
           </main>
           <!-- weather jokes module -->
-          <aside class="cell aside">Weather Jokes</aside>
+          <aside class="cell aside">Climate Fact</aside>
         <footer class="cell footer">Footer
 
 				</footer>
       </div>
+
+			<script type="text/javascript">
+				const CounterApp = {
+					data() {
+						return {
+							counter: 0
+						}
+					}
+				}
+				Vue.createApp(CounterApp).mount('#app')
+			</script>
+
+
     </body>
 </html>
