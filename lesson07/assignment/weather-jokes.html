@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+				<link rel="stylesheet" href="https://www.visualcrossing.com/widgets/forecast/weather-forecast-widget-d3.css">
+				<script src="https://unpkg.com/vue@next"></script>
+        <script src="scripts.js"></script>
+        <script src="https://unpkg.com/vue@next"></script>
+        <title>Weather Jokes</title>
+    </head>
+    <body>
+      <div class="container">
+        <header class="cell header">
+          <img src="./seattle_weather_logo.png" alt="Seattle Weather Logo in white color">
+        </header>
+        <nav class="nav" role="navigation" aria-label="primary">
+					<ul>
+						<li class="li"><a href="index.html">Home</a></li>
+						<li class="li"><a href="">link</a></li>
+						<li class="li"><a href="">Weather Jokes</a></li>
+						<li class="li"><a href="fact.html">Climate Fact</a></li>
+					</ul>
+				</nav>
+        <!-- visualcrossing weather module -->
+          <main class="">Weather Jokes
+          </main>
+          <!-- weather jokes module -->
+          <aside class="cell aside">
+            <div id="app">
+              <img v-if="imageShowing" v-bind:src="imageSrc" img width="200">
+              <button v-if="!imageShowing" v-on:click="toggleImage">Show image</button>
+              <button v-if="imageShowing" v-on:click="toggleImage">Hide image</button>
+            </div>
+          </aside>
+        <footer class="cell footer">Footer
+
+				</footer>
+      </div>
+      <script type="text/javascript">
+        const CounterApp = {
+          name: "counter app",
+          data() {
+            return {
+              laterDater: undefined,
+              counter: 0,
+              imageShowing: true,
+              imageSrc: this.nextImage(),
+            }
+          },
+          methods: {
+            toggleImage() {
+              if (this.imageShowing === false) {
+                this.imageShowing = true
+              } else {
+                this.imageShowing = false
+              }
+            },
+            nextImage() {
+              let imgSrc = [
+                "images/giphy.gif",
+                "images/giphy2.gif",
+                "images/giphy3.gif"
+              ]
+              // Return a random number in the imgSrc
+              let randomNum = Math.floor(Math.random() * imgSrc.length);
+              return imgSrc[randomNum];
+            }
+          }
+        }
+        Vue.createApp(CounterApp).mount('#app')
+      </script>
+    </body>
+</html>
