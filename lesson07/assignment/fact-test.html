@@ -28,9 +28,11 @@
           <main>
 						<div id="app">
               <h2>Climate Facts</h2>
-              <p v-for="fact in factsList">{{ fact.title }}<br>
-								{{fact.descr}}</p>
 
+              <div v-for="fact in factsList">
+	            <h3>{{ fact.title }}</h3>
+              <p>{{ fact.descr }}</p>
+              </div>
 
               <button v-on:click="randomize">Show me another fact</button>
               <a v-bind:href="url">credit</a>
@@ -50,13 +52,14 @@
           el: '#app',
           data: {
             url: 'https://www.noaa.gov/climate',
+            factIndex: 0,
             factsList: [
                 { "title": "2019 was second-warmest year on record",
 								  "descr": "Earth’s global average surface temperature was 1.71°F (0.95°C) above the 20th-century average in 2019. Nine of the 10 warmest years on record have occurred since 2005."
 								},
 
                 { "title": "6 inches of water",
-								 	"descr": "A mere 6 inches of fast-moving flood water can knock over an adult. It takes just 12 inches of rushing water to carry away a small car, while 2 feet of rushing water can carry away most vehicles. It is NEVER safe to drive or walk into flood waters.""
+								 	"descr": "A mere 6 inches of fast-moving flood water can knock over an adult. It takes just 12 inches of rushing water to carry away a small car, while 2 feet of rushing water can carry away most vehicles. It is NEVER safe to drive or walk into flood waters."
 								},
 
                 { "title": "$1.16 trillion in damages",
@@ -109,5 +112,8 @@
         }
         Vue.createApp(CounterApp).mount('#app')
       </script>
+      <style media="screen">
+
+      </style>
     </body>
 </html>
